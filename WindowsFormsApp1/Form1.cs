@@ -17,7 +17,7 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
-        string skladnikPierwszy;
+        string skladnikPierwszy= null;
         decimal a, b,wynik;
         char rodzajDzialania='0';
        
@@ -102,7 +102,7 @@ namespace WindowsFormsApp1
             a = Convert.ToDecimal(skladnikPierwszy);
             wynik = WykonajDzialanie(wynik, a);
             rodzajDzialania = '+';
-            skladnikPierwszy ="";
+            skladnikPierwszy =null;
             textBox1.Text += '+';
             a = 0;
 
@@ -116,7 +116,7 @@ namespace WindowsFormsApp1
             a = Convert.ToDecimal(skladnikPierwszy);
             wynik = WykonajDzialanie(wynik,a);
             rodzajDzialania = '-';
-            skladnikPierwszy = "";
+            skladnikPierwszy = null;
             textBox1.Text += '-';
             a = 0;
         }
@@ -132,7 +132,7 @@ namespace WindowsFormsApp1
             a = Convert.ToDecimal(skladnikPierwszy);
             wynik = WykonajDzialanie(wynik, a);
             rodzajDzialania = '*';
-            skladnikPierwszy = "";
+            skladnikPierwszy = null;
             textBox1.Text += 'x';
             
         }

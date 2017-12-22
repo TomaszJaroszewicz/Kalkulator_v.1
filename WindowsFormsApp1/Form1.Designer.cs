@@ -47,8 +47,6 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.zmieńToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.eXITToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -160,12 +158,14 @@
             // textBox1
             // 
             resources.ApplyResources(this.textBox1, "textBox1");
-            this.textBox1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.textBox1.Name = "textBox1";
             // 
             // menuStrip1
             // 
             resources.ApplyResources(this.menuStrip1, "menuStrip1");
+            this.menuStrip1.BackColor = System.Drawing.Color.Silver;
+            this.menuStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem1});
             this.menuStrip1.Name = "menuStrip1";
@@ -173,28 +173,13 @@
             // toolStripMenuItem1
             // 
             resources.ApplyResources(this.toolStripMenuItem1, "toolStripMenuItem1");
-            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.zmieńToolStripMenuItem,
-            this.eXITToolStripMenuItem});
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            // 
-            // zmieńToolStripMenuItem
-            // 
-            resources.ApplyResources(this.zmieńToolStripMenuItem, "zmieńToolStripMenuItem");
-            this.zmieńToolStripMenuItem.Name = "zmieńToolStripMenuItem";
-            // 
-            // eXITToolStripMenuItem
-            // 
-            resources.ApplyResources(this.eXITToolStripMenuItem, "eXITToolStripMenuItem");
-            this.eXITToolStripMenuItem.Image = global::WindowsFormsApp1.Properties.Resources.DSC_1656;
-            this.eXITToolStripMenuItem.Name = "eXITToolStripMenuItem";
-            this.eXITToolStripMenuItem.Click += new System.EventHandler(this.eXITToolStripMenuItem_Click);
             // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.BackColor = System.Drawing.Color.Silver;
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.plus);
             this.Controls.Add(this.minus);
@@ -243,8 +228,6 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem zmieńToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem eXITToolStripMenuItem;
     }
 }
 

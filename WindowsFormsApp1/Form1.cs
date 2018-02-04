@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.IO;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -18,7 +19,7 @@ namespace WindowsFormsApp1
         }
 
         string skladnikPierwszy= null;
-        decimal a, b,wynik;
+        double a, b,wynik;
         char rodzajDzialania='0';
        
 
@@ -99,7 +100,7 @@ namespace WindowsFormsApp1
                 rodzajDzialania = '+';
             
             
-            a = Convert.ToDecimal(skladnikPierwszy);
+            a = Convert.ToDouble(skladnikPierwszy);
             wynik = WykonajDzialanie(wynik, a);
             rodzajDzialania = '+';
             skladnikPierwszy =null;
@@ -113,7 +114,7 @@ namespace WindowsFormsApp1
             if (rodzajDzialania == '=')
                  rodzajDzialania = '-';
 
-            a = Convert.ToDecimal(skladnikPierwszy);
+            a = Convert.ToDouble(skladnikPierwszy);
             wynik = WykonajDzialanie(wynik,a);
             rodzajDzialania = '-';
             skladnikPierwszy = null;
@@ -129,7 +130,7 @@ namespace WindowsFormsApp1
                 skladnikPierwszy = "1";
             }
 
-            a = Convert.ToDecimal(skladnikPierwszy);
+            a = Convert.ToDouble(skladnikPierwszy);
             wynik = WykonajDzialanie(wynik, a);
             rodzajDzialania = '*';
             skladnikPierwszy = null;
@@ -140,7 +141,7 @@ namespace WindowsFormsApp1
         private void equals_Click(object sender, EventArgs e)
         {
             textBox1.Text+="=";
-            a = Convert.ToDecimal(skladnikPierwszy);
+            a = Convert.ToDouble(skladnikPierwszy);
             
             wynik = WykonajDzialanie(wynik, a);
             skladnikPierwszy = "0";
@@ -150,12 +151,18 @@ namespace WindowsFormsApp1
                    
         }
 
-        private void eXITToolStripMenuItem_Click(object sender, EventArgs e)
+        
+
+        private void textBox1_KeyDown(object sender, KeyEventArgs e)
         {
-            Close();
+            skladnikPierwszy +=textBox1.Text;
         }
 
-      
+        private void ppoint_Click(object sender, EventArgs e)
+        {
+            skladnikPierwszy += '.';
+            textBox1.Text += ',';
+        }
 
         private void clear_Click(object sender, EventArgs e)
         {
@@ -166,7 +173,7 @@ namespace WindowsFormsApp1
             rodzajDzialania = '0';
         }
 
-        private decimal WykonajDzialanie(decimal a,decimal b)
+        private double WykonajDzialanie(double a,double b)
         {
             
             switch (rodzajDzialania)

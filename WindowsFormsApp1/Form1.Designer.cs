@@ -45,9 +45,7 @@
             this.minus = new System.Windows.Forms.Button();
             this.plus = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip1.SuspendLayout();
+            this.ppoint = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -157,29 +155,24 @@
             // 
             // textBox1
             // 
-            resources.ApplyResources(this.textBox1, "textBox1");
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            resources.ApplyResources(this.textBox1, "textBox1");
             this.textBox1.Name = "textBox1";
+            this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
             // 
-            // menuStrip1
+            // ppoint
             // 
-            resources.ApplyResources(this.menuStrip1, "menuStrip1");
-            this.menuStrip1.BackColor = System.Drawing.Color.Silver;
-            this.menuStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem1});
-            this.menuStrip1.Name = "menuStrip1";
-            // 
-            // toolStripMenuItem1
-            // 
-            resources.ApplyResources(this.toolStripMenuItem1, "toolStripMenuItem1");
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            resources.ApplyResources(this.ppoint, "ppoint");
+            this.ppoint.Name = "ppoint";
+            this.ppoint.UseVisualStyleBackColor = true;
+            this.ppoint.Click += new System.EventHandler(this.ppoint_Click);
             // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
+            this.Controls.Add(this.ppoint);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.plus);
             this.Controls.Add(this.minus);
@@ -196,13 +189,9 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form1";
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -226,8 +215,7 @@
         private System.Windows.Forms.Button minus;
         private System.Windows.Forms.Button plus;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.Button ppoint;
     }
 }
 
